@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graph Generator</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .code_container {
+        display: inline-block;
+        border: 2px solid black;
+        margin: 3px;
+        width: 47%;
+      }
+
+      .graph_output {
+        display: inline-block;
+        border: 2px solid black;
+        margin: 3px;
+        width: 53%;
+        height: 100%;
+      }
+      .graph_container {
+        width: 100%;
+      }
+      #graph_canvas{
+        height: 650px;
+        /* background-image: url("static/parse_tree.jpg");
+        background-size: contain;
+        background-repeat: no-repeat; */
+        /* background-position: 50% 50%; */
+
+      }
+
+      .graph_code {
+        margin: 3px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* .group{
+    margin: 4px;
+    padding: 2px;
+} */
+
+      .codeBox {
+        padding-top: 0;
+        padding-left: 0;
+        line-height: 1em;
+      }
+
+      #btn_submit {
+        width: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="code_container">
+        <h2>Code Editor</h2>
+        <form action="/" method="POST">
+          <!-- <div class="group">
+            <label for="graph type">Graph Type</label>
+            <select id="graph_type" name="graph_type">
+              <option value="select">Select a Graph Type</option>
+              <option value="bar">Bar Graph</option>
+              <option value="pie">Pie Chart</option>
+              <option value="scatter">Scatter Plot</option>
+              <option value="line">Line Graph</option>
+              <option value="bubble">Bubble Chart</option>
+              <option value="area">Area Chart</option>
+              <option value="donut">Donut Chart</option>
+              <option value="radar">Radar Chart</option>
+            </select>
+          </div>
+
+          <div class="group">
+            <label for="graph data">Graph Data</label>
+            <input type="text" name="graph_data" id="graph_data" />
+          </div>
+
+          <div class="group">
+            <label for="graph labls">Graph Labels</label>
+            <input type="text" name="graph_labels" id="graph_labels" />
+          </div> -->
+          <textarea name="codeBox" id="codeBox" cols="15" rows="40"></textarea>
+
+          <input type="submit" id=" btn_submit" value="Submit" />
+        </form>
+      </div>
+
+      <div class="graph_output">
+        <h2>Graph</h2>
+        <div class="graph_container">
+          <div id="graph_canvas">
+            <!-- <img src="static/parse_tree.jpg" alt="Parse tree" width= "100%" height="100%" object-fit="contain" > -->
+            <object
+              data="static/parse_tree.pdf"
+              type="application/pdf"
+              width="100%"
+              height="100%"
+            >
+              <!-- <p>
+                Unable to display PDF file.
+                <a
+                  href="./parse_tree.pdf"
+                  >Download</a
+                >
+                instead.
+              </p> -->
+            </object>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script></script>
+  </body>
+</html>

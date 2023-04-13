@@ -1,0 +1,50 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.code_container {
+  display: inline-block;
+  border: 2px solid black;
+  margin: 3px;
+  width: 47%;
+}
+
+.graph_output {
+  display: inline-block;
+  border: 2px solid black;
+  margin: 3px;
+  width: 53%;
+}
+.graph_container {
+  width: 100%;
+}
+
+.graph_code {
+  margin: 3px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .group{
+    margin: 4px;
+    padding: 2px;
+} */
+
+.codeBox {
+  padding-top: 0;
+  padding-left: 0;
+  line-height: 1em;
+}
+
+#btn_submit {
+  width: 10;
+}
