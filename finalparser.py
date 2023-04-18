@@ -39,7 +39,7 @@ parser = c_parser.CParser()
 def preprocess(c_code):
     c_code = re.sub(r'#\s*include\s*<.*?>', '', c_code)
     c_code = c_code.replace('\r', '')
-    print(c_code)
+    # print(c_code)
     return c_code
 
 
@@ -64,13 +64,11 @@ def generate_parse_tree(ast):
 
     add_nodes(ast)
     dot.render('parse_tree', format='pdf', cleanup=True, directory= './static')
-    # return dot
 
 if __name__ == '__main__':
     c_code=preprocess(c_code)
     ast = generate_ast(c_code)
     print(ast)
     generate_parse_tree(ast)
-    # parse_tree.render('parse_tree', format='pdf', cleanup=True)
 
 
